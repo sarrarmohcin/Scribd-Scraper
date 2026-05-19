@@ -66,6 +66,17 @@ def get_documents(session, params, page):
             
             # get document page count
             page_count = doc.get('pageCount', None)
+            
+            # get language
+            language = doc.get('language', {})
+            if language and 'name' in language:
+                lang = language['name']
+            else:
+                lang = None
+                
+            # get isUnlocked
+            isUnlocked = doc.get('isUnlocked', None)
+            
 
 
             
@@ -82,7 +93,7 @@ def get_documents(session, params, page):
                 'description': description,
                 'read_url': read_url,
                 'thumbnail': thumbnail,
-                
+                'language': lang,
                 'author_name': author_name,
                 'author_url': f"https://www.scribd.com{author_url}" if author_url else None,
                 
@@ -91,6 +102,7 @@ def get_documents(session, params, page):
                 'upload_date': upload_date,
                 'upvotes': upvotes,
                 'downvotes': downvotes,
+                'isUnlocked': isUnlocked
             })
             
         
