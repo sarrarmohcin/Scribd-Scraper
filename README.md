@@ -90,3 +90,10 @@ The scraped data is saved into a CSV file named `scribd_documents.csv` in the cu
 - Scribd may change its API or response structure at any time.
 - Excessive requests may trigger temporary rate limiting.
 - The script uses randomized sleep intervals between requests to reduce detection risk.
+
+## 📬 Contact
+
+Feel free to reach out:
+
+- 📧 Email: sarrar.mohcin@gmail.com
+- 🌐 Upwork: https://www.upwork.com/freelancers/~01901f654ceb7c53fc
